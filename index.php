@@ -25,7 +25,7 @@
     <a href="#" class="logo">Lagring<span>Studio</span></a>
 
     <nav class="navbar">
-        <a href="#home">Home</a>
+        <a href="#home">Homee</a>
         <a href="#about">About us</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
