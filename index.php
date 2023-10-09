@@ -25,7 +25,7 @@
     <a href="#" class="logo">Lagring<span>Studio</span></a>
 
     <nav class="navbar">
-        <a href="#home">Homee</a>
+        <a href="#home">Home</a>
         <a href="#about">About us</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
@@ -65,10 +65,10 @@
 </div>
 
 <section class="about-us">
-    <img src="sample_pic/pic1.jpg">
+    <img src="aboutus.jpg">
     <div class="content">
         <h2>About us</h2>
-        <p>About us</p>
+        <p>Backround of Lagring Studio Back in 2010, There a woman named Alegria Garcia Established a photo studio in Salitran named it Lagring Studio. Alegria “Lagring” Garcia is  mother to 4 child. The humble start of Lagring shows that persistence is important if you want to be successful. It started with a small studio offering ID pictures, photo and video packages into events. They also sell frames in different size and photo enlargement. Through years of business, they establish their name in picture industry specially in Imus. They now covers almost 70% of public schools in Imus such as the big school of Imus National High School (INHS), Gen. Emilio Aguinald National High School (GEANHS), Malagasang 1,2,3 Elementary School, etc.. Until now, the business continues to grow.</p>
     </div>
 </section>
 
