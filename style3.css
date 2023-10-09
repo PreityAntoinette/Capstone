@@ -5,18 +5,18 @@
     font-family: 'poppins', sans-serif;
 }
 body{
-    background-color: #dee0e3;
+    background-color: #ffffff;
 }
-.heading{
+.headingabout{
     text-align: center;
     margin-top: 25px;
 }
-.heading h1{
+.headingabout h1{
     font-size: 50px;
     color: #36455c;
     margin-top: 10px;
 }
-.heading p{
+.headingabout p{
     font-size: 20px;
     color: #666;
     margin-bottom: 50px;
@@ -45,6 +45,8 @@ body{
     font-size: 18px;
     line-height: 1.5;
     margin: 15px 0px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 @media(max-width: 768px){

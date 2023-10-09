@@ -59,17 +59,18 @@
 
 <!-- about section starts-->
 
-<div class="heading" id="about">
-    <h1 class="heading"> <span> about </span> us </h1>
-    <p>About us</P>
+<div class="headingabout" id="about">
+    <h1 class="headingabout"> about us </h1>
 </div>
 
 <section class="about-us">
     <img src="aboutus.jpg">
     <div class="content">
-        <h2>About us</h2>
-        <p>Backround of Lagring Studio Back in 2010, There a woman named Alegria Garcia Established a photo studio in Salitran named it Lagring Studio. Alegria “Lagring” Garcia is  mother to 4 child. The humble start of Lagring shows that persistence is important if you want to be successful. It started with a small studio offering ID pictures, photo and video packages into events. They also sell frames in different size and photo enlargement. Through years of business, they establish their name in picture industry specially in Imus. They now covers almost 70% of public schools in Imus such as the big school of Imus National High School (INHS), Gen. Emilio Aguinald National High School (GEANHS), Malagasang 1,2,3 Elementary School, etc.. Until now, the business continues to grow.</p>
+        <h2>Lagring Studio</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Backround of Lagring Studio Back in 2010, There a woman named Alegria Garcia Established a photo studio in Salitran named it Lagring Studio. Alegria “Lagring” Garcia is  mother to 4 child. The humble start of Lagring shows that persistence is important if you want to be successful. It started with a small studio offering ID pictures, photo and video packages into events. They also sell frames in different size and photo enlargement. Through years of business, they establish their name in picture industry specially in Imus. They now covers almost 70% of public schools in Imus such as the big school of Imus National High School (INHS), Gen. Emilio Aguinald National High School (GEANHS), Malagasang 1,2,3 Elementary School, etc.. Until now, the business continues to grow.</p>
     </div>
+
+    
 </section>
 
 <!-- about section ends-->
@@ -94,14 +95,14 @@
         <a href="sample_pic/pic5.jpg" data-lightbox="services" data-title="Caption5">
             <img src="sample_pic/pic5.jpg">
         </a>
-        <a href="sample_pic/pic6.jpg" data-lightbox="services" data-title="Caption6">
-            <img src="sample_pic/pic6.jpg">
+        <a href="sample_pic/pic14.jpg" data-lightbox="services" data-title="Caption6">
+            <img src="sample_pic/pic14.jpg">
         </a>
         <a href="sample_pic/pic7.jpg" data-lightbox="services" data-title="Caption7">
             <img src="sample_pic/pic7.jpg">
         </a>
-        <a href="sample_pic/pic8.jpg" data-lightbox="services" data-title="Caption8">
-            <img src="sample_pic/pic8.jpg">
+        <a href="sample_pic/pic15.jpg" data-lightbox="services" data-title="Caption8">
+            <img src="sample_pic/pic15.jpg">
         </a>   
         
     </div>
