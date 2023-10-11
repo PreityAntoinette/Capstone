@@ -48,7 +48,7 @@
     <div class="content">
         <h3>Lagring studio</h3>
         <span>Photography</span>
-        <p></p>
+        <p>Mama tarba</p>
         <a href="#" class="btn">Schedule now</a>
     </div>
 </section>
