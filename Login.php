@@ -8,22 +8,39 @@ if(isset($_POST['Register']))
     $fname = $_POST['firstname'];
     $mname = $_POST['middlename'];
     $lname = $_POST['lastname'];
-    $mail = $_POST['email'];
+    $email = $_POST['email'];
     $pass = $_POST['password'];
     $repeatpass = $_POST['confirm_password'];
+    $role='USER';
 
-    if(!empty($mail) && !empty($pass) && !is_numeric($mail))
-{
-    $query = "insert into users (firstname, middlename, lastname, email, password,confirm_password) values ('$fname','$mname','$lname','$mail','$pass','$repeatpass')";
+    $hashed = password_hash($pass, PASSWORD_BCRYPT);
 
-    mysqli_query($conn,$query);
+    $selectQuery = $connection -> prepare('SELECT * FROM users WHERE email = ?');
+    $selectQuery -> bind_param('s', $email);
+    $selectQuery -> execute();
+    $result = $selectQuery->get_result();
 
-    echo "<script type='text/javascript'> alert('Successfully Register')</script>";
+    if($result-> num_rows>0){
+    echo "<script type='text/javascript'> alert('Email already exist.')</script>";
+    }
+    else{
+
+    
+    $registerQuery = $connection -> prepare( 'INSERT INTO users (firstname, middlename, lastname, eemail, password, role) values (?,?,?,?,?,?)');
+
+    $registerQuery -> bind_param('ssssss', $fname, $mname, $lname, $email, $hashed, $role);
+
+    if ($registerQuery->execute()){
+        echo "<script type='text/javascript'> alert('Registered Succesfully')</script>";
+    }
+    
 }
-else{
-    echo "<script type='text/javascript'> alert('Please enter some Valid Information')</script>";
 }
-}
+   
+
+
+
+
 
 
 
@@ -35,25 +52,19 @@ else{
 if(isset($_POST['Login']))
 {
    
-    $mail = $_POST['email'];
+    $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    if(!empty($mail) && !empty($pass) && !is_numeric($mail)){
-        $query = "select * from users where email = '$mail' limit 1";
-        $result = mysqli_query($conn, $query);
+    $selectQuery = $connection -> prepare('SELECT * FROM users WHERE email = ?');
+    $selectQuery -> bind_param('s', $email);
+    $selectQuery -> execute();
+    $result = $selectQuery->get_result();
 
-        if($result){
-            if($result && mysqli_num_rows ($result) > 0){
-                $user_data = mysqli_fetch_assoc($result);
-
-                if($user_data['password'] == $pass){
-                    header("location: dashboard.php");
-                    die;
-                }
-            }
-        }
+    if($result-> num_rows>0){
+    echo "<script type='text/javascript'> alert('Email already exist.')</script>";
     }
-    
+
+
     
 }
 
@@ -121,7 +132,7 @@ if(isset($_POST['Login']))
 
                 <form method="POST">
                     <div class="input-field">
-                        <input type="text" name="email" placeholder="Enter your email" required>
+                        <input type="text" name="email" placeholder="Enter your eemail" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
@@ -173,7 +184,7 @@ if(isset($_POST['Login']))
                     </div>
 
                     <div class="input-field">
-                        <input type="text" name="email" placeholder="Enter your email" required>
+                        <input type="text" name="eemail" placeholder="Enter your eemail" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">

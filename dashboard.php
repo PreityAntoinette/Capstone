@@ -1,9 +1,6 @@
 <?php
 
-    include('db.php');
-
-
-
+    require_once 'session.php';
 
 
 ?>
@@ -41,7 +38,7 @@
             <div class="navBody">
                 <ul class="navLinks">
                     <li>
-                        <a href="#" class="navLinkActive">
+                        <a href="#dashboard" class="navLinkActive">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
