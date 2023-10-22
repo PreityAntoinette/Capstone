@@ -14,7 +14,7 @@ if(isset($_POST['Register']))
 
     if(!empty($mail) && !empty($pass) && !is_numeric($mail))
 {
-    $query = "insert into form (fullname, email, password,repeat_password) values ('$fname','$mname','$lname','$mail','$pass','$repeatpass')";
+    $query = "insert into users (firstname, middlename, lastname, email, password,confirm_password) values ('$fname','$mname','$lname','$mail','$pass','$repeatpass')";
 
     mysqli_query($conn,$query);
 
@@ -39,7 +39,7 @@ if(isset($_POST['Login']))
     $pass = $_POST['password'];
 
     if(!empty($mail) && !empty($pass) && !is_numeric($mail)){
-        $query = "select * from form where email = '$mail' limit 1";
+        $query = "select * from users where email = '$mail' limit 1";
         $result = mysqli_query($conn, $query);
 
         if($result){
