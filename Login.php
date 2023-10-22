@@ -5,14 +5,16 @@ include("db.php");
 
 if(isset($_POST['Register']))
 {
-    $fname = $_POST['fullname'];
+    $fname = $_POST['firstname'];
+    $mname = $_POST['middlename'];
+    $lname = $_POST['lastname'];
     $mail = $_POST['email'];
     $pass = $_POST['password'];
-    $repeatpass = $_POST['repeat_password'];
+    $repeatpass = $_POST['confirm_password'];
 
     if(!empty($mail) && !empty($pass) && !is_numeric($mail))
 {
-    $query = "insert into form (fullname, email, password,repeat_password) values ('$fname','$mail','$pass','$repeatpass')";
+    $query = "insert into form (fullname, email, password,repeat_password) values ('$fname','$mname','$lname','$mail','$pass','$repeatpass')";
 
     mysqli_query($conn,$query);
 
@@ -75,7 +77,7 @@ if(isset($_POST['Login']))
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="Stylelogin.css">
+    <link rel="stylesheet" href="css/Stylelogin.css">
          
     <title>Login & Registration Form</title> 
 </head>
@@ -156,9 +158,20 @@ if(isset($_POST['Login']))
 
                 <form method="POST">
                     <div class="input-field">
-                        <input type="text" name="fullname" placeholder="Enter your name" required>
+                        <input type="text" name="firstname" placeholder="Enter your firstname" required>
                         <i class="uil uil-user"></i>
                     </div>
+
+                    <div class="input-field">
+                        <input type="text" name="midllename" placeholder="Enter your middlename" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" name="lastname" placeholder="Enter your lastname" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
                     <div class="input-field">
                         <input type="text" name="email" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
@@ -168,7 +181,7 @@ if(isset($_POST['Login']))
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" name="repeat_password" class="password" placeholder="Confirm a password" required>
+                        <input type="password" name="confirm_password" class="password" placeholder="Confirm a password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -195,6 +208,6 @@ if(isset($_POST['Login']))
         </div>
     </div>
 
-     <script src="script.js"></script> 
+     <script src="js/script.js"></script> 
 </body>
 </html>
