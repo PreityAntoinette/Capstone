@@ -163,7 +163,7 @@ if(isset($_POST['Login']))
                     </div>
 
                     <div class="input-field">
-                        <input type="text" name="midllename" placeholder="Enter your middlename" required>
+                        <input type="text" name="middlename" placeholder="Enter your middlename" required>
                         <i class="uil uil-user"></i>
                     </div>
 
